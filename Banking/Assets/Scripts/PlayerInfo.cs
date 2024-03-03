@@ -9,7 +9,6 @@ public class PlayerInfo : MonoBehaviour
     // fields
     [SerializeField]
     private TextMeshProUGUI text;
-
     private string creditText = "Credit Card Required";
     private string debitText = "Debit Card Required";
 
@@ -30,8 +29,7 @@ public class PlayerInfo : MonoBehaviour
         {
             debitText = "$" + Player.Instance.Money.ToString();
         }
-        text.text = "Funds: " + debitText + "\tTime Right Now: " + Player.Instance.Time + ":00" + 
-                    "\tDebt: " + creditText+ "\nTaxes: "+ Player.Instance.Tax +"\n\t SSN: "+Player.Instance.SSNtax+
-                    "\n\t Medicare: "+Player.Instance.MedicareTax;
+        text.text = "Funds: " + debitText +
+                    "\nDebt: " + creditText;
     }
 }

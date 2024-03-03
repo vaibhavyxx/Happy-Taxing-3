@@ -29,7 +29,7 @@ public class Work : MonoBehaviour
         {
             if (!Player.Instance.DebitCard)
             {
-                text.text = "Get a credit before you get a job!";
+                text.text = "Get a debit card before you get a job!";
             }
             else
             {
