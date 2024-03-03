@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     }
 
     // fields
-
+    float federalTax = 0;
     private bool creditCard = false;
     private bool debitCard = false;
     private bool employed = false;
@@ -31,7 +31,13 @@ public class Player : MonoBehaviour
     private float tax=0;
     float ssnTax;
     float medicareTax;
+    float annualIncome = 0;
 
+    public float FederalTax
+    {
+        get { return federalTax; }
+        set { federalTax = value; }
+    }
     public float SSNtax
     {
         get { return ssnTax; }
@@ -44,6 +50,11 @@ public class Player : MonoBehaviour
         set { medicareTax = value;}
     }
 
+    public float AnnualIncome
+    {
+        get { return annualIncome; }
+        set { annualIncome = value; }
+    }
     // properties
     public bool CreditCard
     {

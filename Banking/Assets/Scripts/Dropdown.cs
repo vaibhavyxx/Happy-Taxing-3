@@ -25,10 +25,10 @@ public class Dropdown : MonoBehaviour
     }
     void Update()
     {
-        /*text.text = "Time: " + Player.Instance.Time + ":00" +
+        text.text = "Time: " + Player.Instance.Time + ":00" +
                     "\nTaxes: " + Player.Instance.Tax +
                         "\n SSN: " + Player.Instance.SSNtax +
-                        "\n Medicare: " + Player.Instance.MedicareTax;*/
+                        "\n Medicare: " + Player.Instance.MedicareTax;
     }
 
     public void ShowDropDown()

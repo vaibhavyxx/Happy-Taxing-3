@@ -36,6 +36,7 @@ public class Work : MonoBehaviour
                 Player.Instance.Employed = true;
                 float playerTime = Player.Instance.Time;
                 time += 0.5f;
+                text.text = "You're hired!";
                 if (time >= HoursWorked && playerTime <= 10)
                 {
                     //playerTime += HoursWorked;
@@ -56,11 +57,15 @@ public class Work : MonoBehaviour
         Player.Instance.Money = payPerHour * 8 * 10;        //15.20 for two weeks that is 10 days, 8 hours long
     }
 
+    public void YearlySalary()
+    {
+        Player.Instance.AnnualIncome = payPerHour * 40 * 4 * 12;
+    }
+
     //shows how much you are taxed on a daily basis
     public void Taxed()
     {
         float playerMoney = Player.Instance.Money;
-        Debug.Log("in works: " + playerMoney);
         float SSNTax = playerMoney * 0.62f;
         float medicareTax = playerMoney * 0.145f;
         float taxes = SSNTax + medicareTax;
